@@ -11,6 +11,7 @@ function pruebaboton(){
     let pw = document.getElementById('pw').value
 
     if (usuario==user && clave==pw) {
+        window.open("calculadora.html")
         console.log('ingreso correcto');
      } else {
             console.log("error de contraseña");

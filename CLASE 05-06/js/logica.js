@@ -19,12 +19,8 @@ function pruebaboton(){
     
 
 
-    console.log ("usuario ${user} clave ${pw}")
+    console.log (`usuario ${user} clave ${pw}`)
 
 
 }
-
-
-
-
 

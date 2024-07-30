@@ -8,10 +8,10 @@ const clave = '1234'
 
 function pruebaboton(){
 
-    let user = document.getElementById('user').value
+    let user = document.getElementById('user').value.toLocaleUpperCase()
     let pw = document.getElementById('pw').value
 
-    if (usuario==user && clave==pw) {
+    if (usuario.toLocaleUpperCase()==user && clave==pw) {
         //en esta parte el usuario se encuentra logueado
         setUser()
         window.open("localstorage.html")

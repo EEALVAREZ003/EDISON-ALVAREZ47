@@ -5,22 +5,23 @@ const clave = '1234'
 
 
 
+
 function pruebaboton(){
 
     let user = document.getElementById('user').value
     let pw = document.getElementById('pw').value
 
     if (usuario==user && clave==pw) {
-        window.open("calculadora.html")
+        //en esta parte el usuario se encuentra logueado
+        setUser()
+        window.open("localstorage.html")
         console.log('ingreso correcto');
      } else {
             console.log("error de contraseña");
         } 
     
-
-
-    console.log (`usuario ${user} clave ${pw}`)
-
-
 }
-
+function setUser (){
+    localStorage.setItem('usuario',usuario)
+}
+console.log (`usuario ${user} clave ${pw}`)

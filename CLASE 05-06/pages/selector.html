@@ -38,16 +38,26 @@
 
         </div>
         <label for="inputPassword20" class="form-label mt-5">usuario</label>
-        <input id="user" type="text" id="inputPassword5" placeholder="ingrese usuario" class="form-control"
+        <input id="user" type="text" placeholder="ingrese usuario" class="form-control"
             aria-describedby="passwordHelpBlock">
         <label for="inputPassword5" class="form-label mt-2">contraseña</label>
-        <input id="pw" type="password" id="inputPassword5" placeholder="ingrese contraseña" class="form-control"
+        <input id="pw" type="password" placeholder="ingrese contraseña" class="form-control"
             aria-describedby="passwordHelpBlock">
-
         
-        <div button type="button" class="btn btn-primary mt-2" onclick="pruebaboton()">ingresar</button>>
+        <div class="d-grid gap-2">
+            <button type="button" class="btn btn-primary mt-3" onclick="pruebaboton()">entrar</button>
+            <button type="button" class="btn btn-dark mt-3" onclick="imprimirarreglo()">imprimir</button>
 
+            <input id="arrayposicion" type="number" id="inputPassword5" placeholder="ingrese posicion vector" class="form-control">
+
+<label for="inputPassword5" class="form-label mt-4">Agregar Frutas</label>
+            <input id="nombrefruta" type="text" id="inputPassword5" placeholder="ingrese nombre de la fruta" class="form-control">
+            <button type="button" class="btn btn-success mt-3" onclick="agregarfruta()">agregar</button>
+            <button type="button" class="btn btn-danger mt-3" onclick="eliminarfruta()">eliminar</button>
         </div>
+        
+            
+        
     </div>
     <script src="../js/logica.js"></script>
 

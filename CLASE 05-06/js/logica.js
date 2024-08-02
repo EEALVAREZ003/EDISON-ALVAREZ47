@@ -26,9 +26,9 @@ function pruebaboton() {
 function bloquearcuenta(){
     
     
-    let contador =localStorage.getItem('contador') || 0
-    console.log(`valor inicial de storage ${contador})}`);
-    if (contador==3){
+    let contadorstorage =localStorage.getItem('contador') || 0
+    console.log(`valor inicial de storage ${contadorstorage})}`);
+    if (contadorstorage==3){
         console.log('cuenta bloqueada');
     }else {
         contarintentos()
@@ -38,10 +38,10 @@ function bloquearcuenta(){
 //contar cada vez que ingresa la contraseña mal
 
 function contarintentos(){
-    let contador =localStorage.getItem('contador') || 0
-    contador++
-    console.log(`contador ${ localStorage.getItem('contador')}`);
-    setcontador(contador)
+    let contadorstorage =localStorage.getItem('contador') || 0
+    contadorstorage++
+    console.log(`contador ${ contadorstorage}`);
+    setcontador(contadorstorage)
 }
 
 function setUser(){
@@ -50,6 +50,10 @@ function setUser(){
 
 function setcontador(contador){
     localStorage.setItem('contador', contador)
+}
+
+function desbloquearcuenta(){
+    localStorage.removeItem('contador',0)
 }
 
 

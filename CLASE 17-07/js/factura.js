@@ -29,10 +29,24 @@ function calcularTotal(){
     const tipoCliente = document.getElementById('tipoCliente').value
     const mecanico = parseInt(document.getElementById('mecanico').value)
     const repuesto = parseInt(document.getElementById('repuesto').value)
+    let total=0
 
-    const total= valorServicio+mecanico+repuesto
+
+    total=tipoCliente === 'normal' ? valorServicio+mecanico+repuesto: (valorServicio+mecanico+repuesto)*0.9
+
+
+
+
+
+   // if(tipoCliente=='normal'){
+     //   total= valorServicio+mecanico+repuesto
+    //}else{
+      //  total= (valorServicio+mecanico+repuesto)*0.9
+
+    //}
 
     console.log(total)
+    console.log(tipoCliente)
    
 }
 

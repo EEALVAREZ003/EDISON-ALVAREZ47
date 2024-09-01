@@ -8,11 +8,11 @@ function registrar() {
     const telefono = document.getElementById('telefono').value
     const tipoCliente = document.getElementById('tipoCliente').value
     const dataUsuario = {
-        cedula:cedula,
-        nombres:nombres,
-        apellidos:apellidos,
-        telefono:telefono,
-        tipoCliente:tipoCliente
+        CEDULA:cedula,
+        NOMBRES:nombres,
+        APELLIDOS:apellidos,
+        TELEFONO:telefono,
+        CLASECLIENTE:tipoCliente
     }
     let usuarios=JSON.parse(localStorage.getItem('usuarios'))|| []
 

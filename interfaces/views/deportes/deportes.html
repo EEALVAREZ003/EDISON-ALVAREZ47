@@ -27,7 +27,7 @@
             <div class="col mt-5">
 
                 <label>Nombres</label>
-                <input type="text" class="form-control" placeholder="Ingrese Nombre Deporte"
+                <input type="text" id="deporte" class="form-control" placeholder="Ingrese Nombre Deporte"
                     aria-describedby="passwordHelpBlock">
             </div>
         </div>
@@ -38,10 +38,13 @@
             <div class="col mt-5">
                 <a class="navbar-brand" href="/interfaces/index.html"><button type="button"
                         class="btn btn-danger btn-lg">Cancelar</button></a>
-                <button type="button" class="btn btn-success btn-lg">Guardar</button>
+                <button type="button" onclick="registrarDeportes()" class="btn btn-success btn-lg">Guardar</button>
             </div>
         </div>
     </div>
     
 </body>
+
+
+<script src="./deportes.js"></script>
 </html>

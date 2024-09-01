@@ -29,18 +29,18 @@
             <div class="col mt-5">
 
                 <label>Tipo de Documento</label>
-                <select class="form-select" aria-label="Default select example">
+                <select class="form-select" id="tipoDocumento" aria-label="Default select example">
                     <option selected>Seleccione Tipo de Documento</option>
-                    <option value="1">Cedula de Ciudadanía</option>
-                    <option value="2">Tarjeta de Identidad</option>
-                    <option value="3">Pasaporte</option>
+                    <option value="Cedula">Cedula de Ciudadanía</option>
+                    <option value="TarjetaIdentidad">Tarjeta de Identidad</option>
+                    <option value="Pasaporte">Pasaporte</option>
                 </select>
             </div>
 
             <div class="col mt-5">
 
                 <label>Número de Documento</label>
-                <input type="number" class="form-control" placeholder="Ingrese Número del Documento"
+                <input type="number" class="form-control" id="numeroDocumento" placeholder="Ingrese Número del Documento"
                     aria-describedby="passwordHelpBlock">
 
 
@@ -53,13 +53,13 @@
             <div class="col mt-5">
 
                 <label>Nombres</label>
-                <input type="text" class="form-control" placeholder="Ingrese Nombres" aria-describedby="passwordHelpBlock">
+                <input type="text" class="form-control" id="nombres" placeholder="Ingrese Nombres" aria-describedby="passwordHelpBlock">
             </div>
 
             <div class="col mt-5">
 
                 <label>Apellidos</label>
-                <input type="text" class="form-control" placeholder="Ingrese Apellidos" aria-describedby="passwordHelpBlock">
+                <input type="text" class="form-control" id="apellidos" placeholder="Ingrese Apellidos" aria-describedby="passwordHelpBlock">
 
 
             </div>
@@ -73,7 +73,7 @@
             <div class="col mt-5">
 
                 <label>Dirección</label>
-                <input type="text" class="form-control" placeholder="Ingrese Dirección" aria-describedby="passwordHelpBlock">
+                <input type="text" class="form-control" id="direccion" placeholder="Ingrese Dirección" aria-describedby="passwordHelpBlock">
             </div>
 
         </div>
@@ -83,13 +83,13 @@
             <div class="col mt-5">
                
                 <label>Teléfono</label>
-                <input type="number" class="form-control" placeholder="Ingrese Número Telefónico" aria-describedby="passwordHelpBlock">
+                <input type="number" class="form-control" id="telefono" placeholder="Ingrese Número Telefónico" aria-describedby="passwordHelpBlock">
             </div>
 
             <div class="col mt-5">
 
                 <label>Fecha de Nacimiento</label>
-                <input type="date" class="form-control" placeholder="Fecha de Nacimiento"
+                <input type="date" class="form-control" id="fechaNacimiento" placeholder="Fecha de Nacimiento"
                     aria-describedby="passwordHelpBlock">
 
 
@@ -101,7 +101,7 @@
         <div class="row align-items-start">
             <div class="col mt-5">
                 <a class="navbar-brand" href="/interfaces/index.html"><button type="button" class="btn btn-danger btn-lg" >Cancelar</button></a> 
-                <button type="button" class="btn btn-success btn-lg">Guardar</button>
+               <button class="btn btn-success btn-lg" onclick="registrarPersonas()" >Guardar</button>
                
                 
             </div>
@@ -111,5 +111,7 @@
 
 
 </body>
+<script src="./ingresarPersonas2.js"></script>
+
 
 </html>

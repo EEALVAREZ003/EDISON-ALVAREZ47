@@ -11,14 +11,14 @@
         crossorigin="anonymous"></script>
 
 
-    <title>Facturación</title>
+    <title>Tienda Juanita</title>
 </head>
 
 <body>
     <!--barra de navegación-->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Facturación</a>
+            <a class="navbar-brand" href="#">Ventas Juanita</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -37,39 +37,35 @@
         <form class="row g-3">
 
 
-            <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Tipo de Cliente</label>
-                <select id="tipoCliente" class="form-select" aria-label="Default select example">
-                </select>
-            </div>
-
-
-            <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Servicios</label>
-                <select id="servicios" class="form-select" aria-label="Default select example">
+            <div>
+                <label for="exampleFormControlTextarea1" class="form-label">Producto</label>
+                <select id="selectProductos" class="form-select" aria-label="Default select example">
                 </select>
             </div>
 
             <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Servicio Mecanico</label>
-                <input type="number" value="0" class="form-control" id="mecanico" placeholder="Ingrese Mano de Obra">
+                <label for="exampleFormControlTextarea1" class="form-label">Cantidad</label>
+                <input type="number" value="1" class="form-control" id="cantidad" placeholder="Ingrese Mano de Obra">
             </div>
 
-            <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Descripcion Servicios</label>
-                <textarea type="text" class="form-control" id="descripcion" placeholder="Ingrese lo que se Realizó"
-                    required></textarea>
-            </div>
+            
+            <button class="btn btn-primary" onclick="agregarProducto()">Agregar</button>
 
-            <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Respuestos</label>
-                <input type="number" value="0" class="form-control" id="repuesto"
-                    placeholder="Ingrese si hay repuestos">
-            </div>
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Total</th>
+                  </tr>
+                </thead>
+                <tbody id="tablaProductos">
+                  
+                </tbody>
+              </table>
 
-
-
-            <button class="btn-primary" onclick="calcularTotal()">Calcular Total</button>
+              <button class="btn btn-dark" onclick="agXXXXXXX()">Total</button>
         </form>
 
     </div>
@@ -83,6 +79,6 @@
     integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
     crossorigin="anonymous"></script>
 
-<script src="../js/factura.js"></script>
+<script src="./JS/ventas.js"></script>
 
 </html>

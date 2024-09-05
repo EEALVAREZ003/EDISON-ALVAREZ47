@@ -13,6 +13,7 @@ dataProductos.forEach(element => {
 });
 
 const tablaProductos = document.getElementById('tablaProductos')
+const totalPagar = document.getElementById('total')
 
 function agregarProducto() {
     //precio producto
@@ -25,7 +26,7 @@ function agregarProducto() {
     const fila = document.createElement('tr')
 
     const nomProduct = document.createElement('td')
-    nomProduct.textContent = 'por definir'
+    nomProduct.textContent = ('pro')
     fila.appendChild(nomProduct)
 
     const priceProduct = document.createElement('td')
@@ -40,33 +41,44 @@ function agregarProducto() {
     total.textContent = subTotal
     fila.appendChild(total)
 
-    const botonProduct= document.createElement('td')
-    const botonBorrar=document.createElement('button')
+    const botonProduct = document.createElement('td')
+    const botonBorrar = document.createElement('button')
+    botonBorrar.textContent = 'Borrar'
+    botonBorrar.className = 'btn btn-danger'
+    
+
+    botonBorrar.addEventListener('click', () => {
+        fila.remove()
+        calcularTotal()
+        //alert('eliminando')
+
+    })
 
     botonProduct.appendChild(botonBorrar)
     fila.appendChild(botonProduct)
-
     tablaProductos.appendChild(fila)
+    calcularTotal()
 }
 
-function calcularTotal(){
+function calcularTotal() {
     let total = 0
 
     const filas = Array.from(tablaProductos.getElementsByTagName('tr'))
 
     //for (let i = 0; i < filas.length; i++) {
-      //  const valorColumna = filas[i].getElementsByTagName('td')
+    //  const valorColumna = filas[i].getElementsByTagName('td')
 
-       // total+= parseInt(valorColumna[3].textCotent)
-   // }
+    // total+= parseInt(valorColumna[3].textCotent)
+    // }
 
     filas.forEach(fila => {
         const valorColumna = fila.getElementsByTagName('td')
-        total+= parseInt(valorColumna[3].textCotent)
-        
+        total += parseInt(valorColumna[3].textContent)
+
     });
 
-    alert(total)
+    totalPagar.textContent = total
+    // alert(total)
 
 }
 

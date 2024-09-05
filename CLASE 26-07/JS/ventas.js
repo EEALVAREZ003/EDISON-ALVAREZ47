@@ -20,13 +20,15 @@ function agregarProducto() {
     const precioProducto = selectProductos.value
     //cantidad productos
     const cantidad = document.getElementById('cantidad').value
+    //nombre del producto
+    const nombreProducto = selectProductos.options[selectProductos.selectedIndex].text
 
     const subTotal = precioProducto * cantidad
 
     const fila = document.createElement('tr')
 
     const nomProduct = document.createElement('td')
-    nomProduct.textContent = ('pro')
+    nomProduct.textContent = nombreProducto
     fila.appendChild(nomProduct)
 
     const priceProduct = document.createElement('td')
@@ -45,7 +47,7 @@ function agregarProducto() {
     const botonBorrar = document.createElement('button')
     botonBorrar.textContent = 'Borrar'
     botonBorrar.className = 'btn btn-danger'
-    
+
 
     botonBorrar.addEventListener('click', () => {
         fila.remove()
